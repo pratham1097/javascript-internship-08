@@ -1,0 +1,55 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>  
+<script>  
+$(document).ready(function(){  
+    $("#create").click(function(){  
+        $("#D2").animate({left:'100px'});
+        $("#D2").hide(1000);
+    }); 
+
+    $("#hide").click(function(){  
+        $("#D1").hide(2000); 
+        $(this).attr("disabled",true);
+		$("#show").attr("disabled",false); 
+    }); 
+    $("#show").click(function(){  
+        $("#D1").show(1000); 
+        $(this).attr("disabled",true);
+	    $("#hide").attr("disabled",false); 
+    });   
+    $("#button").click(function(){  
+        $("#D1").toggle(1000);  
+    }); 
+    $("#click").click(function(){  
+        $("#D3 img").fadeIn(1000); 
+        $("#D3 img").toggle();  
+    }); 
+});  
+
+</script>  
+<style type="text/css">
+#D1{background-color:rgb(39, 190, 236);height:100px;width:100px;}
+#D2{background-color:#eb2aaa;height:100px;width:100px;position:relative;}
+#button{border-radius: 10px;}
+#D3 img{width:500px;display:none;}
+</style>
+</head>  
+<body> 
+    <div id="D1">
+        pratham varma
+    </div> <hr>
+    <div id="D2">
+        Abhishek patel
+    </div><hr> 
+        <div id="D3">
+            <img src="blog1.jpg">
+        </div>
+<button id="hide">Hide</button>
+<button id="show">Show</button><hr>
+<button id="button"> Show / Hide </button><hr> 
+<button id="create"> click to animate</button><hr> 
+<button id="click"> click to show image</button><hr> 
+</body>  
+</html>
